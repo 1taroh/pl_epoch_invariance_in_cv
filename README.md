@@ -1,0 +1,2 @@
+# pl_epoch_invariance_in_cv
+pytorch-lightning と sklearn.model_selection.KFold を用いたときに，エポック数を変化させても学習結果が重なるようにする方法
