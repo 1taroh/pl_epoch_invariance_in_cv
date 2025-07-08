@@ -46,7 +46,8 @@ class MyModel(pl.LightningModule):
         return loss
     
     def validation_step(self, batch, batch_idx):
-        pass
+        print("------------------")
+        print("validation_step")
 
     def configure_optimizers(self):
         optimizer = torch.optim.Adam(self.parameters(), lr=1e-3)
@@ -66,7 +67,7 @@ def main(check_val_every_n_epoch, generator_seed=None):
     # seed を固定してもdataloaderの順番は固定されない．
     # dataloaderの順番を固定するには外部からgeneratorを与える必要がある．
     
-    epochs = 3
+    epochs = 4
 
     dm = MyDataModule(generator_seed=generator_seed)
     model = MyModel()
